@@ -4,8 +4,10 @@ import "./service.scss";
 function Service() {
 
   const [data, setData] = useState(0)
-
   const [data2, setData2] = useState(30)
+
+  const [btn1, setBtn1] = useState("lightBlue")
+  const [btn2, setBtn2] = useState("lightGrey")
 
   return (
     <div className=" main container d-flex justify-content-center">
@@ -21,16 +23,21 @@ function Service() {
         </div>
 
         <div className="bottom">
-          <div className="btn btn-light mt-5 me-3" onClick={() => {
+          <div className="btn mt-5 me-3 btn1" onClick={() => {
             setData(0);
-            setData2(30)
-          }}> Monthly</div>
-          <div className="btn  btn-light mt-5" onClick={() => {
+            setData2(30);
+            setBtn1("lightBlue");
+            setBtn2("lightGrey");
+            
+          }}  style={{backgroundColor:btn1}}>Monthly</div>
+          <div className="btn mt-5 btn2" onClick={() => {
             setData(20);
-            setData2(100)
-          }}> Anually</div>
-          <div className="cards row">
-            <div className="card">
+            setData2(100);
+            setBtn1("lightGrey");
+            setBtn2("lightBlue");
+          }} style={{backgroundColor:btn2}}>Anually</div>
+          <div className="scards row">
+            <div className="scard">
               <div className="content">
                 <h1>${data}<sub>/month</sub></h1>
                 <h2>Business Class</h2>
@@ -43,7 +50,7 @@ function Service() {
                 Ecommerce store</p>
               <div className="try">start free trial</div>
             </div>
-            <div className="card ">
+            <div className="scard ">
               <div className="content">
                 <h1>${data2}<sub>/month</sub></h1>
                 <h2>Business Class</h2>

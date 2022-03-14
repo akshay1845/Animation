@@ -1,9 +1,12 @@
 .intro {
     display: flex;
-    height: calc(100vh - 70px);
     width: 100vw;
+    height: 100vh; 
+    margin-top: -83px;   
     position: relative;
     top: 0;
+    background: transparent;
+    z-index: -1;
 
     .left {
       flex: 0.5;
@@ -32,6 +35,26 @@
           color: white;
           font-weight: 500;
         }
+
+        .titleBar {
+          width: 280px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: #d3d3d3;
+          text-align: center;
+          font-size: 15px;
+          position: relative;
+
+          span {
+            background-color: orange;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: 0;
+            padding-top: 5px;
+          }
+        }
       }
 
       .card {
@@ -44,7 +67,6 @@
         height: 200px;
       }
       .introCard {
-        /* border: 1px solid black; */
         height: 200px;
         width: 450px;
         background-color: #f8eedd;
@@ -58,31 +80,12 @@
       flex: 0.5;
       background-color: #f8eedd;
     
-      /* border: 2px solid green; */
-
       .introImg {
-        height: 500px;
+        height: 400px;
       }
     }
   }
   
-  .titleBar {
-    width: 280px;
-    height: 40px;
-    border-radius: 20px;
-    background-color: #d3d3d3;
-    text-align: center;
-    font-size: 15px;
-    position: relative;
-  }
   
-  .titleBar span {
-    background-color: orange;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    left: 0;
-    padding-top: 5px;
-  }
+  
   

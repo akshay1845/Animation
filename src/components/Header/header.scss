@@ -1,15 +1,25 @@
-.logo1{
-    font-size: 40px;
-    font-weight: 500px;
-    color:orange;
+.header{
+    z-index: 1;
+
+    .logo1{
+        font-size: 40px;
+        font-weight: 800;
+        color:orange;
+
+        .logo2{
+            font-size: 40px;
+            color: #130f40;
+        }
+    }
+
+    .list{
+        font-size: 15px;
+        font-weight: 800;
+    }
 }
 
-.logo2{
-    font-size: 40px;
-    color: #130f40;
-}
 
-.list{
-    font-size: 15px;
-    font-weight: 200px;
-}
+
+
+
+
