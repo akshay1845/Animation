@@ -7,42 +7,47 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export default function Work() {
+
   const rightImg = useRef(null)
   const workT = useRef(null)
 
   useEffect(() => {
 
-      gsap.from(".card", {
-        duration:1,
-        x: -800,
-        stagger:0.2,
-        delay:2
-        ,scrollTrigger: {
-          trigger:"cards",
-          top:"top 80%"
+    gsap.from(".card", {
+      duration: 1,
+      x: -800,
+      stagger: 0.2,
+      delay: 2
+      , ScrollTrigger: {
+        trigger: ".cards",
+        top: "top 80%"
       }
-      });
+    });
 
     gsap.from(
       workT.current,
-      { duration: 4, opacity: 0 ,scrollTrigger: {
-        trigger:"cards",
-        top:"top 80%"
-    }},
-      { duration: 4, delay: 2, opacity:0.5},
-      {duration:4, opacity:1}
+      {
+        duration: 4, opacity: 0,
+        ScrollTrigger: {
+          trigger: ".cards",
+          top: "top 80%"
+        }
+      },
+      { duration: 4, delay: 2, opacity: 0.5 },
+      { duration: 4, opacity: 1 }
     );
-    gsap.from(rightImg.current, {duration:2,delay:2,x: 800,scrollTrigger: {
-      trigger:"cards",
-      top:"top 80%"
-  }
-  })
+    gsap.from(rightImg.current, {
+      duration: 2, delay: 2, x: 800, ScrollTrigger: {
+        trigger: ".cards",
+        top: "top 80%"
+      }
+    })
   }, []);
   return (
     <>
       <div className="work">
         <div className="leftwork">
-          <div className="worktitle" ref = {workT}>
+          <div className="worktitle" ref={workT}>
             <h1>Ultimate features That we built</h1>
             <p>
               the rise of mobile device transform the way consume information
@@ -106,8 +111,8 @@ export default function Work() {
             </Container>
           </div>
         </div>
-        <div className="rightwork" ref={rightImg}>
-          <img className="rightImg" src="assets/startup.svg" alt="work img" />
+        <div className="rightwork" >
+          <img className="rightImg" src="assets/startup.svg" alt="work img" ref={rightImg} />
         </div>
       </div>
     </>
